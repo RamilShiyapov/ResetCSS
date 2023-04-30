@@ -111,7 +111,7 @@ input[type="file"] {
   border-radius: unset;
 }
 
-input:is([type="text"], [type="password"], [type="email"], [type="search"]),
+input:is([type="text"], [type="password"], [type="email"], [type="search"], [type="url"]),
 textarea,
 [contenteditable] {
   caret-color: rgb(27 127 204 / 80%);
