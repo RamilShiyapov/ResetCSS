@@ -1,6 +1,4 @@
-# ResettingStylesForWebsites
-
-
+# reset-css
 
 Мой файл сброса стилей для веб-сайтов
 
