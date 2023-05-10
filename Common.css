@@ -40,30 +40,6 @@
   background-color: transparent;
 }
 
-::scrollbar {
-  width: 0.75rem;
-}
-
-::scrollbar-track {
-  background-color: rgba(66, 62, 62, 0.486);
-}
-
-::scrollbar-thumb {
-  background-color: rgba(106, 103, 103, 0.486);
-}
-
-::scrollbar-thumb:hover {
-  background-color: rgb(106 103 103 / 80%);
-}
-
-::scrollbar-thumb:active {
-  background-color: rgb(106 103 103 / 60%);
-}
-
-::scrollbar-corner {
-  background-color: transparent;
-}
-
 picture,
 img,
 svg {
@@ -112,7 +88,14 @@ input[type="file"] {
   border-radius: unset;
 }
 
-input:is([type="text"], [type="tel"], [type="number"], [type="password"], [type="email"], [type="search"], [type="url"]),
+input:is(
+    [type="text"], 
+    [type="tel"], 
+    [type="number"],
+    [type="password"], 
+    [type="email"], 
+    [type="search"], 
+    [type="url"]),
 textarea,
 [contenteditable] {
   caret-color: rgb(27 127 204 / 80%);
