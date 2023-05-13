@@ -98,6 +98,17 @@ textarea,
   caret-color: rgb(27 127 204 / 80%);
 }
 
+:is(
+  input,
+  button, 
+  option, 
+  select,
+  optgroup, 
+  textarea):disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
 [contenteditable] {
   padding: 16px;
   cursor: text;
