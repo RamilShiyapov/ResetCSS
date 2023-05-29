@@ -1,10 +1,12 @@
+/*https://github.com/RamilShiyapov/ResetCSS*/
+
 *,
 *::before,
 *::after {
   margin: unset;
   padding: unset;
   box-sizing: border-box;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-out;
 }
 
 :focus-visible {
@@ -13,7 +15,7 @@
 }
 
 ::selection {
-  background-color: rgba(66, 62, 62, 0.486);
+  background-color: rgb(255 255 255 / 40%);
 }
 
 ::-webkit-scrollbar {
@@ -46,14 +48,13 @@ svg {
   display: flex;
 }
 
-picture {
-  width: auto;
-  height: auto;
+img,
+svg {
+  max-width: 100%;
+  vertical-align: top;
 }
 
-details summary,
 button,
-label,
 select,
 input:is(
     [type="date"],
@@ -67,35 +68,73 @@ input:is(
     [type="checkbox"],
     [type="datetime-local"]
   ),
-::file-selector-button {
+label[for],
+details summary,
+::file-selector-button, 
+::-webkit-inner-spin-button,
+::-webkit-calendar-picker-indicator {
   cursor: pointer;
 }
 
-button,
-input:is(
-  [type="button"], 
-  [type="submit"],
-  [type="file"]),
-::file-selector-button {
-  background-color: unset;
+details summary {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+::file-selector-button  {
+  font: unset;
   color: unset;
+  margin: unset;
+  padding: unset;
   border: unset;
   appearance: unset;
-  white-space: unset;
-  font-size: 100%;
+  margin-inline: unset;
+  background-color: unset;
+}
+
+input,
+select, 
+button,
+textarea {
+  font: unset;
+  color: unset;
+  border: unset;
+  text-align: start;
+  text-shadow: unset;
+  text-indent: unset;
+  word-spacing: unset;
+  margin-inline: unset;
+  padding-inline: unset;
+  text-transform: unset;
+  letter-spacing: unset;
+  background-color: unset;
 }
 
 input:is(
+    [type="tel"],
+    [type="url"],
     [type="text"], 
-    [type="tel"], 
-    [type="number"],
-    [type="password"], 
     [type="email"], 
+    [type="number"],
     [type="search"], 
-    [type="url"]),
+    [type="password"]
+  ),
 textarea,
 [contenteditable] {
   caret-color: rgb(27 127 204 / 80%);
+}
+
+input:is(
+    [type="tel"],
+    [type="url"],
+    [type="text"], 
+    [type="email"], 
+    [type="number"],
+    [type="search"], 
+    [type="password"]
+  ),
+textarea {
+  border: unset;
 }
 
 :is(
@@ -110,20 +149,13 @@ textarea,
 }
 
 [contenteditable] {
-  padding: 16px;
+  padding: 15px;
   cursor: text;
   border: 1px solid rgb(27 127 204 / 80%);
 }
 
 img[alt] {
-  color: black;
   font: normal 500 1rem system-ui;
-}
-
-img,
-svg {
-  max-width: 100%;
-  vertical-align: top;
 }
 
 q {
