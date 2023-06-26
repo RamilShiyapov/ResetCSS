@@ -8,8 +8,8 @@
 }
 
 :focus-visible {
-  outline: 2px dashed rgb(27 127 204 / 80%);
   transition: unset;
+  outline: 2px solid rgb(27, 127, 204);
 }
 
 ::selection {
@@ -46,9 +46,9 @@ script  {
   display: none !important;
 }
 
-picture,
+svg,
 img,
-svg {
+picture {
   display: flex;
 }
 
@@ -112,8 +112,8 @@ textarea,
 }
 
 [contenteditable] {
-  padding: 15px;
   cursor: text;
+  padding: 15px;
   border: 1px solid rgb(27 127 204 / 80%);
 }
 
@@ -125,17 +125,30 @@ q {
   quotes: '"' '"';
 }
 
-dialog {
-  display: none;
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+strong {
+  font-weight: bold !important;
 }
 
-dialog[open] {
-  display: flex;  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} 
+i, 
+em {
+  font-style: italic !important;
+}
+
+s, 
+del {
+  text-decoration: line-through !important;
+}
+
+u {
+  text-decoration: red wavy underline !important;
+}
 
 noscript {
   width: 100%;
