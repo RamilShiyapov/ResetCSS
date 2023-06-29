@@ -9,11 +9,11 @@
 
 :focus-visible {
   transition: unset;
-  outline: 3px solid rgb(27 127 204 / 80%);
+  outline: 2px solid rgb(27 127 204 / 80%);
 }
 
 ::selection {
-  background-color: rgb(27 127 204 / 80%);
+  background-color: rgba(108, 56, 134, 0.8);
 }
 
 ::-webkit-scrollbar {
@@ -150,6 +150,14 @@ del {
 
 u {
   text-decoration: red wavy underline !important;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+template {
+  display: none !important;
 }
 
 noscript {
